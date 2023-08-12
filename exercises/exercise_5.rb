@@ -8,3 +8,12 @@ puts "Exercise 5"
 puts "----------"
 
 # Your code goes here ...
+
+total = Store.sum("annual_revenue")
+numStores = Store.count
+highRevenue = Store.where('annual_revenue >= ?', 1000000).count
+
+
+puts "Total revenue from stores #{total}"
+puts "Average revenue from stores #{total/numStores }"
+puts "High revenue stores: #{highRevenue}"
